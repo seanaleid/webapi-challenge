@@ -2,9 +2,10 @@
 const router = require('express').Router();
 
 // import model
-const projectDb = require('./projectModel');
+const projectDb = require('./projectModel.js');
 
-// GET
+
+// GET projects
 router.get('/', (req, res) => {
     projectDb.get()
         .then(projects => {
@@ -12,6 +13,19 @@ router.get('/', (req, res) => {
         })
         .catch(err => {
             res.status(500).json({ errorMessage: 'There was an error retrieving the projects!'})
+        })
+})
+
+// GET project actions
+router.get('/:id/actions', (req, res) => {
+    const actions = {...req.body, project_id: req.params.id}
+    
+    projectDb.getProjectActions(actions)
+        .then(actions => {
+            res.status(200).json(actions)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error retrieving the project actions!'})
         })
 })
 
@@ -51,7 +65,7 @@ router.delete('/:id', (req, res) => {
             res.status(200).json(deleteProject)
         })
         .catch(err => {
-            res.status(500).json({ errorMessage: 'There was an error updating the project!'})
+            res.status(500).json({ errorMessage: 'There was an error deleting the project!'})
         })
 })
 
