@@ -5,8 +5,14 @@ const router = require('express').Router();
 const projectDb = require('./projectModel.js');
 
 
+var express = require('express')
+var cors = require('cors')
+var app = express()
+ 
+
+
 // GET projects
-router.get('/', (req, res) => {
+router.get('/', cors(), (req, res) => {
     projectDb.get()
         .then(projects => {
             res.status(200).json(projects)

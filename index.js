@@ -1,8 +1,8 @@
-require('dotenv').config();
+if(!process.env.now) require('dotenv').config();
 
 const server = require("./server.js");
 
-const port = process.env.PORT || 8888;
+const port = process.env.now ? 8080 : 4000;
 
 server.listen(port, () => {
     console.log(`\n *** Gandalf the Grey 🧙🏼‍ has cast the server spell! Now running on ${port} *** \n`);
