@@ -29,6 +29,18 @@ router.post('/', (req, res) => {
 })
 
 // PUT
+router.put('/:id', (req, res) => {
+    const {id} = req.params;
+    const updateProject = req.body;
+    
+    projectDb.update(id, updateProject)
+        .then(updateProject => {
+            res.status(200).json(updateProject)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error updating the project!'})
+        })
+})
 
 // DELETE
 
