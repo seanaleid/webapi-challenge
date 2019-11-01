@@ -21,7 +21,7 @@ server.get('/', (req, res) => {
 
 // set the routers
 // tells the server to use these routers
-server.use('/api/projects', projectRouter);
+server.use('https://webapichallenge.now.sh/api/projects', projectRouter);
 server.use('/api/actions', actionRouter);
 
 module.exports = server;
