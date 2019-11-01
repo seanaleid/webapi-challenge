@@ -1,3 +1,4 @@
+<-- Initial Commit -->
 # Sprint Challenge: Express and Node.js - Projects & Actions
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Building RESTful Web APIs with Express and Node.js, Server-side Routing, Express Middleware & Deployment and Good Practices. In your challenge for this Sprint, you will demonstrate proficiency by creating an Web API using Node.js and Express.
@@ -38,17 +39,17 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your _Team Lead_ as collaborator on Github.
+- [X] Clone your forked version of the Repository.
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master on your fork. **Please don't merge your own pull request.**
-- [ ] Add your _Team Lead_ as a Reviewer on the Pull-request
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master on your fork. **Please don't merge your own pull request.**
+- [X] Add your _Team Lead_ as a Reviewer on the Pull-request
 - [ ] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
 
 ## Database Persistence Helpers
