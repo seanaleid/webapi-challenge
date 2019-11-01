@@ -39,11 +39,22 @@ router.put('/:id', (req, res) => {
             res.status(201).json(updateAction)
         })
         .catch(err => {
-            res.status(500).json({ errorMessage: 'There was an error adding the action!'})
+            res.status(500).json({ errorMessage: 'There was an error updating the action!'})
         })
 })
 
 // DELETE
+router.delete('/:id', (req, res) => {
+    const {id} = req.params;
+    
+    actionDB.remove(id)
+        .then(deleteAction => {
+            res.status(201).json(deleteAction)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error deleting the action!'})
+        })
+})
 
 // export
 module.exports = router;
