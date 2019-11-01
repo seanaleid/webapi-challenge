@@ -1,3 +1,10 @@
+const server = require("./server.js");
+
+server.listen(8888, () => {
+    console.log('\n *** Gandalf the Grey 🧙🏼‍ has cast the server spell! Now running on http://localhost:888 ***');
+});
+
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
@@ -12,3 +19,4 @@ I need this code, just don't know where, perhaps should make some middleware, do
 
 Go code!
 */
+
