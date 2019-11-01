@@ -43,6 +43,17 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE
+router.delete('/:id', (req, res) => {
+    const {id} = req.params;
+    
+    projectDb.remove(id)
+        .then(deleteProject => {
+            res.status(200).json(deleteProject)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error updating the project!'})
+        })
+})
 
 // export
 module.exports = router;
