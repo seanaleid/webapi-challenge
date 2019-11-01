@@ -30,6 +30,18 @@ router.post('/', (req, res) => {
 })
 
 // PUT
+router.put('/:id', (req, res) => {
+    const {id} = req.params;
+    const updateAction = req.body;
+    
+    actionDB.update(id, updateAction)
+        .then(updateAction => {
+            res.status(201).json(updateAction)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error adding the action!'})
+        })
+})
 
 // DELETE
 
