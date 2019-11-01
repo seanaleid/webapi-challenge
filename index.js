@@ -1,7 +1,11 @@
+require('dotenv').config();
+
 const server = require("./server.js");
 
-server.listen(8888, () => {
-    console.log('\n *** Gandalf the Grey 🧙🏼‍ has cast the server spell! Now running on http://localhost:888 ***');
+const port = process.env.PORT || 8888;
+
+server.listen(port, () => {
+    console.log(`\n *** Gandalf the Grey 🧙🏼‍ has cast the server spell! Now running on ${port} *** \n`);
 });
 
 
