@@ -12,12 +12,22 @@ router.get('/:id', (req, res) => {
             res.status(200).json(actions)
         })
         .catch(err => {
-            res.status(500).json({ errorMessage: 'There was an error retrieving the actions!'})
+            res.status(500).json({ errorMessage: 'There was an error retrieving the action!'})
         })
 })
 
 // POST
-
+router.post('/', (req, res) => {
+    const newAction = req.body;
+    
+    actionDB.insert(newAction)
+        .then(newAction => {
+            res.status(201).json(newAction)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error adding the action!'})
+        })
+})
 
 // PUT
 
