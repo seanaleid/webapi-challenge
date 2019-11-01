@@ -18,9 +18,9 @@ router.get('/', (req, res) => {
 
 // GET project actions
 router.get('/:id/actions', (req, res) => {
-    const actions = {...req.body, project_id: req.params.id}
+    const {id} = req.params;
     
-    projectDb.getProjectActions(actions)
+    projectDb.getProjectActions(id)
         .then(actions => {
             res.status(200).json(actions)
         })
