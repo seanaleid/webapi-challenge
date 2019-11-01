@@ -5,7 +5,7 @@ const helmet = require('helmet');
 
 // imports the routers
 const projectRouter = require('./data/helpers/projectRouter.js');
-// const actionRouter = require('./data/helpers/actionRouter');
+const actionRouter = require('./data/helpers/actionRouter');
 
 // creates the server instance
 const server = express();
@@ -22,6 +22,6 @@ server.get('/', (req, res) => {
 // set the routers
 // tells the server to use these routers
 server.use('/api/projects', projectRouter);
-// server.use('/api/actions', actionRouter);
+server.use('/api/actions', actionRouter);
 
 module.exports = server;
