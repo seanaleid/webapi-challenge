@@ -16,6 +16,17 @@ router.get('/', (req, res) => {
 })
 
 // POST
+router.post('/', (req, res) => {
+    const newProject = req.body;
+    
+    projectDb.insert(newProject)
+        .then(newProject => {
+            res.status(201).json(newProject)
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: 'There was an error adding the new project!'})
+        })
+})
 
 // PUT
 
