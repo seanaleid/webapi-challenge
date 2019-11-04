@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "webapi-challenge",
+    "builds": [
+      {
+        "src": "*.js",
+        "use": "@now/node-server",
+        "config": { "distDir": "build" }
+      }
+    ]
+  }

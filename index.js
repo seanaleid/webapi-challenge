@@ -1,3 +1,14 @@
+if(!process.env.now) require('dotenv').config();
+
+const server = require("./server.js");
+
+const port = process.env.now ? 8080 : 4000;
+
+server.listen(port, () => {
+    console.log(`\n *** Gandalf the Grey 🧙🏼‍ has cast the server spell! Now running on ${port} *** \n`);
+});
+
+
 /*
 play this: https://www.youtube.com/watch?v=d-diB65scQU
 
@@ -12,3 +23,4 @@ I need this code, just don't know where, perhaps should make some middleware, do
 
 Go code!
 */
+
